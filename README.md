@@ -1,4 +1,4 @@
-Real-Time Code/Text Editor for Learners and Collaborations.
+<h1>Real-Time Code/Text Editor for Learners and Collaborations.</h1>
 
 **DevCraft** is a live collaborative code editor website where users can write, edit, and share multiple Coding Languages with compilation in real-time. It offers syntax highlighting, user notifications, and seamless collaboration for teams or individuals.
 
