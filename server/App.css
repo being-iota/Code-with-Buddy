@@ -1,0 +1,854 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;400;500;600;700;800&display=swap");
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.homePageWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f0f0;
+  background: linear-gradient(135deg, #1f1c2c, #928dab, #1f1c2c);
+  background-size: 400% 400%; /* Increase the background size for a wider range */
+  animation: gradientAnimation 15s ease infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+.formWrapper {
+  background: rgba(52, 13, 124, 0.323); /* Dark navy blue with transparency */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 1);
+  width: 400px;
+  max-width: 90%;
+  transition: all 0.5s ease-in-out;
+}
+
+.formWrapper:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transition: all 0.5s ease-in-out;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0077cc;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 18px;
+  color: #00aaff;
+  text-align: center;
+}
+
+.homepagelogo {
+  height: 120px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.inputBox {
+  padding: 12px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #444;
+  margin-bottom: 14px;
+  background: #eee;
+  font-size: 16px;
+
+  color: #333;
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn,
+.leaveBtn,
+.copyBtn {
+  background: #00aaff;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+  font-family: "Parkinsans", sans-serif;
+}
+
+.joinBtn:hover,
+.leaveBtn:hover {
+  background: #0077cc;
+}
+
+.createInfo {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.createNewBtn {
+  color: #00aaff;
+  text-decoration: none;
+  border-bottom: 1px solid #00aaff;
+  transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover {
+  color: #0077cc;
+  border-color: #0077cc;
+}
+
+.boxshadow {
+  padding: 0;
+  border-radius: 6px;
+  background: #000000;
+}
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height: 100vh;
+  background: #1a1a2e; /* Dark background */
+}
+
+.aside {
+  background: linear-gradient(
+    135deg,
+    #1f1c2c,
+    #635f74,
+    #1f1c2c
+  ); /* Dark metallic gradient */
+  padding: 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  border-right: 1px solid #424242; /* Subtle border */
+  animation: fadeIn 1s ease-in-out;
+  background-size: 400% 400%; /* Ensure smooth gradient transitions */
+}
+
+.asideInner {
+  flex: 1;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  color: #00aaff; /* Light blue for client text */
+}
+
+.userName {
+  margin-top: 10px;
+  font-family: "Arial", sans-serif; /* Change 'Arial' to your desired font */
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #ffffff; /* Change the text color as needed */
+  text-transform: capitalize; /* Capitalize the first letter */
+  font-weight: normal; /* Ensure the font is not bold */
+}
+
+.logo {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #e0e0e0
+  ); /* Gradient background */
+  border-bottom: 2px solid #ffffff; /* Slightly thicker border for emphasis */
+  padding: 10px; /* Equal padding for all sides */
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Center the content */
+}
+
+.logoImage {
+  height: 50px;
+  max-width: 100%; /* Ensure the image scales appropriately */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+.leaveBtn,
+.shareBtn,
+.copyBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Lato", sans-serif;
+}
+
+.copyBtn {
+  background-color: #00aaff; /* Light blue button */
+  color: #fff;
+}
+
+.leaveBtn {
+  background-color: #ff0055; /* Red button */
+  color: #fff;
+}
+
+.copyBtn:hover {
+  background-color: #0077cc; /* Darker blue on hover */
+}
+
+.leaveBtn:hover {
+  background-color: #cc0033; /* Darker red on hover */
+}
+
+.editorwrap {
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling */
+  background: #1c1c24; /* Dark background for editor area */
+  height: 100vh; /* Ensure the editorwrap spans the full viewport height */
+  box-sizing: border-box; /* Include padding in the height calculation */
+}
+.liveStatus {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff00; /* Bright green color */
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 30px rgba(0, 255, 0, 0.3); /* Add a stronger glow effect */
+  animation: pulse 2s infinite;
+  font-family: "Orbitron", sans-serif; /* Use a futuristic font */
+  letter-spacing: 1px; /* Add some spacing between letters */
+}
+.statusContainer {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: -20px; /* Center items horizontally */
+}
+.liveStatustext {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* Bright green color */
+  text-align: center;
+  margin: 20px 0;
+  /* Add pulsing animation */
+  font-family: "Orbitron", sans-serif; /* Use a futuristic font */
+  letter-spacing: 1px; /* Add some spacing between letters */
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
+      0 0 30px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 255, 0, 0.7),
+      0 0 40px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
+      0 0 30px rgba(0, 255, 0, 0.3);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sPulse {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
+      0 0 30px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 255, 0, 0.7),
+      0 0 40px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
+      0 0 30px rgba(0, 255, 0, 0.3);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Basic Customizations */
+.customHr {
+  border: 0;
+  height: 2px; /* Thickness of the line */
+  background: white; /* Color of the line */
+  margin: 20px 0; /* Spacing around the line */
+}
+
+/* Dashed Line */
+.customHrDashed {
+  border: 0;
+  border-top: 2px dashed white; /* Dashed style */
+  margin: 20px 0;
+}
+
+/* Gradient Line */
+.customHrGradient {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient color */
+  margin: 20px 0;
+}
+
+/* Line with Shadow */
+.customHrShadow {
+  border: 0;
+  height: 2px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: 20px 0;
+}
+
+/* Rounded Corners */
+.customHrRounded {
+  border: 0;
+  height: 2px;
+  background: white;
+  border-radius: 5px; /* Rounded corners */
+  margin: 20px 0;
+}
+
+/* Custom Width */
+.customHrWidth {
+  border: 0;
+  height: 2px;
+  background: white;
+  width: 50%; /* Custom width */
+  margin: 20px auto; /* Centered with custom width */
+}
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* General editor styling */
+.editorwrap {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-end; /* Align buttons to the left */
+  gap: 10px;
+  position: fixed;
+  top: 95px; /* Position 20px from the top */
+  right: 40px; /* Position 20px from the left */
+  z-index: 10;
+}
+/* Button Styles */
+button {
+  padding: 12px 15px;
+  border: none;
+  background-color: #282c34;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Run Button with play icon */
+/* Run Button */
+.runButton {
+  background: linear-gradient(135deg, #4caf50, #388e3c); /* Green gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.runButton:hover {
+  background: linear-gradient(
+    135deg,
+    #45a049,
+    #2e7d32
+  ); /* Darker green gradient */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Console Button with terminal icon */
+.consoleButton {
+  background: linear-gradient(135deg, #ff5722, #e64a19); /* Orange gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consoleButton:hover {
+  background: linear-gradient(
+    135deg,
+    #e64a19,
+    #d84315
+  ); /* Darker orange gradient */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.consoleOverlay {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.7); /* Translucent black */
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  max-height: 60%; /* Limit console height */
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+/* Heading Style */
+.consoleOverlay h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ecf0f1; /* Lighter font color */
+}
+
+/* Console Output */
+.consoleOverlay pre {
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+/* Close Button Styling */
+.toggleConsoleButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 20px;
+  background-color: transparent;
+  color: #ecf0f1;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+/* Hover effect for close button */
+.toggleConsoleButton:hover {
+  background-color: #e74c3c;
+}
+
+/* Close icon inside the button */
+.closeIcon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add fade effect when toggling visibility */
+.consoleOverlay.hidden {
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+}
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes revealBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* Fully visible particles */
+  }
+}
+
+/* Ensure particles are initially hidden and animate their reveal */
+#particles-js {
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.6s ease-out; /* Smooth transition */
+  animation: revealBackground 0.5s ease-out forwards;
+  animation-delay: 2.3s; /* Delay background reveal to match text animation */
+}
+
+/* Existing CSS (unchanged) */
+
+.revealText {
+  animation: reveal 0.4s ease-out forwards;
+}
+
+.additionalInfo {
+  opacity: 0;
+  animation: reveal 0.4s;
+}
+
+.animatedGradientText {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #41e2f2, #3b82f6);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 2.7s ease infinite;
+}
+
+.subheading {
+  font-size: 1.8rem; /* Increase font size for better visibility */
+  font-weight: 600; /* Slightly bold for better emphasis */
+  color: #fff; /* White color for readability */
+  margin-top: 1.5rem; /* Increased top margin for better spacing */
+  text-align: center; /* Center align the text */
+  max-width: 80%; /* Control the width to avoid overflowing */
+  line-height: 1.6; /* Add line height for better readability */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially translated down */
+  animation: reveal 0.4s ease-out forwards; /* Add animation */
+  animation-delay: 0.1s; /* Slight delay to sync with other elements */
+}
+
+@import url("https://fonts.googleapis.com/css2?Lato&display=swap");
+
+.btnn {
+  cursor: pointer;
+  border: solid rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  padding: 9px 30px;
+  transition: 769ms;
+  width: 180px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 25px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 102, 204) 0%,
+    rgb(197, 0, 204) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --hover-width: 221px;
+  font-weight: 300;
+  border-radius: 10px;
+  margin-bottom: -20px;
+}
+
+.btnn:hover {
+  color: rgb(255, 255, 255);
+  width: 221px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 102, 204) 0%,
+    rgb(197, 0, 204) 100% none repeat scroll 0% 0% / auto padding-box border-box
+  );
+  border-color: rgb(255, 255, 255);
+  border-width: 1.6px;
+  border-style: solid;
+}
+
+.welcomefooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  z-index: 1; /* Ensures the footer is above other content */
+}
+
+.additionalInfo {
+  opacity: 0;
+  animation: reveal 0.5s 1.5s ease-out forwards;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+  justify-content: center; /* Center content */
+  text-align: center; /* Center the text */
+  gap: 0.5rem; /* Space between elements */
+}
+
+.subHeading {
+  font-family: "Parkinsans", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.themeSelectorContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 20px; /* Position on the right side */
+  top: 20px; /* Position near the top */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+.themeSelectorContainer label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.themeSelector,
+.languageSelector {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #4947477a;
+  background-color: #101111;
+  color: #4947477a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  font-family: Trebuchet MS;
+  width: 140px;
+  height: 41px;
+  border-width: 3px;
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(231, 231, 231, 1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 1px 0px 6px #1c1b18;
+  background-color: transparent;
+}
+.themeSelector {
+  width: 170px;
+}
+.themeSelectorContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 20px; /* Position on the right side */
+  top: 20px; /* Position near the top */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.themeSelectorContainer label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.themeSelector,
+.languageSelector {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #4947477a;
+  background-color: #1a1a2e; /* Dark background */
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.themeSelector:hover,
+.languageSelector:hover {
+  background-color: #203347; /* Darker background on hover */
+}
+
+.themeSelector option,
+.languageSelector option {
+  background-color: #1a1a2e; /* Dark background for options */
+  color: #ffffff; /* White text for options */
+}
+
+.themeSelector option:hover,
+.languageSelector option:hover {
+  background-color: #203347; /* Darker background on option hover */
+}
+or:hover,
+.languageSelector:hover {
+  background-color: #203347;
+}
+
+.copyBtn,
+.shareBtn,
+.leaveBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border: 2px solid #333333;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.copyBtn:hover,
+.shareBtn:hover,
+.leaveBtn:hover {
+  box-shadow: 0 0 #333;
+  color: #fff;
+  background-color: #333;
+  width: 170px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.shareBtn {
+  margin-top: 20px;
+  background-color: #b2ebf2;
+}
+.leaveBtn {
+  background-color: #f44336;
+}
+.copyBtn {
+  background-color: #c8e6c9;
+}
