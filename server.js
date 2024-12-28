@@ -76,4 +76,10 @@ io.on("connection", (socket) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
+app.use(express.static("./client"));
+app.get("*", (req,res) => {
+  res.sendFile(path.resolve(__dirname, "client", "index.html"))
+});
+
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
