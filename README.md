@@ -27,7 +27,7 @@
 
 ## 🚀 How to use :
 1. **Create a Room**:
-   - Go to the [DevCraft](https://devcraft.aradhya.site) homepage.
+   - Go to the (https://devcraft.aradhya.site) homepage.
    - Enter your username and click "Create Room".
    - A unique room ID will be generated automatically.
 2. **Share Room ID**:
