@@ -1,9 +1,6 @@
 <h1>Real-Time Code/Text Editor for Learners and Collaborations.</h1>
 
-**DevCraft** is a live collaborative code editor website where users can write, edit, and share multiple Coding Languages with compilation in real-time. It offers syntax highlighting, user notifications, and seamless collaboration for teams or individuals.
-
-### 🌐 Deployment Link
-[DevCraft](https://devcraft.aradhya.site)
+It is a live collaborative code editor website where users can write, edit, and share multiple Coding Languages with compilation in real-time. It offers syntax highlighting, user notifications, and seamless collaboration for teams or individuals.
 
 ---
 
@@ -27,7 +24,7 @@
 
 ## 🚀 How to use :
 1. **Create a Room**:
-   - Go to the (https://devcraft.aradhya.site) homepage.
+   - Go to the homepage.
    - Enter your username and click "Create Room".
    - A unique room ID will be generated automatically.
 2. **Share Room ID**:
