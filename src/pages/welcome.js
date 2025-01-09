@@ -96,9 +96,9 @@ const Welcome = () => {
         </div>
         <footer className="welcomefooter">
           <p>
-            © 2024 DevCraft. Crafted with 🫶🏻 by{" "}
+            © 2024 Code with Buddy. Crafted with 🫶🏻 by{" "}
             <a
-              href="https://www.github.com/alfastrek"
+              href="https://www.github.com/Kaap10"
               target="_blank"
               rel="noopener noreferrer"
             >
