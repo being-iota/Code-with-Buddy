@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://devcraft.azurewebsites.net", "http://localhost:3000"], // Allow both production and local development
+    origin: ["https://devcraft.azurewebsites.net", "http://localhost:3001"], // Allow both production and local development
     methods: ["GET", "POST"],
   },
 });
@@ -80,5 +80,5 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));

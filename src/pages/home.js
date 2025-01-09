@@ -13,12 +13,12 @@ const Home = () => {
     e.preventDefault();
     const id = uuidv4();
     setroomId(id);
-    toast.success("Created a new room");
+    toast.success("Created a new room!");
   };
 
   const joinRoom = () => {
     if (!roomId || !username) {
-      toast.error("ROOM ID & username is required");
+      toast.error("ROOM ID & Username is required");
       return;
     }
 
