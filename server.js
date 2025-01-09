@@ -1,10 +1,10 @@
 const express = require("express");
-const app = express();
 const http = require("http");
 const path = require("path");
 const { Server } = require("socket.io");
 const ACTIONS = require("./src/Actions");
 
+const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
@@ -13,29 +13,30 @@ const io = new Server(server, {
   },
 });
 
+// Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, "build")));
+
+// Catch-all route to serve the React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const userSocketMap = {};
+
+// Get all clients connected to a room
 function getAllConnectedClients(roomId) {
-  // Map
-  return Array.from(io.sockets.adapter.rooms.get(roomId) || []).map(
-    (socketId) => {
-      return {
-        socketId,
-        username: userSocketMap[socketId],
-      };
-    }
-  );
-  // console.log(clients);
-  // return clients;
+  return Array.from(io.sockets.adapter.rooms.get(roomId) || []).map((socketId) => {
+    return {
+      socketId,
+      username: userSocketMap[socketId],
+    };
+  });
 }
 
 io.on("connection", (socket) => {
-  console.log("socket connected", socket.id);
+  console.log("Socket connected:", socket.id);
 
+  // Handle a user joining a room
   socket.on(ACTIONS.JOIN, ({ roomId, username }) => {
     userSocketMap[socket.id] = username;
     socket.join(roomId);
@@ -49,18 +50,22 @@ io.on("connection", (socket) => {
     });
   });
 
+  // Handle code change
   socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code }) => {
     socket.in(roomId).emit(ACTIONS.CODE_CHANGE, { code });
-    //io.to(roomId).emit(ACTIONS.CODE_CHANGE, { code });
   });
 
+  // Handle syncing code to a specific user
   socket.on(ACTIONS.SYNC_CODE, ({ socketId, code }) => {
     io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
   });
+
+  // Handle language change
   socket.on(ACTIONS.LANGUAGE_CHANGE, ({ roomId, language }) => {
     socket.in(roomId).emit(ACTIONS.LANGUAGE_CHANGE, { language });
   });
 
+  // Handle user disconnecting
   socket.on("disconnecting", () => {
     const rooms = [...socket.rooms];
     rooms.forEach((roomId) => {
@@ -71,15 +76,9 @@ io.on("connection", (socket) => {
     });
     delete userSocketMap[socket.id];
     socket.leave();
-    console.log("socket disconnected", socket.id);
+    console.log("Socket disconnected:", socket.id);
   });
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.use(express.static("./client"));
-app.get("*", (req,res) => {
-  res.sendFile(path.resolve(__dirname, "client", "index.html"))
-});
-
-server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
