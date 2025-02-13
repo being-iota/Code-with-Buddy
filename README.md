@@ -1,54 +1,51 @@
-# DevCraft : Real-Time Code/Text Editor for Learners and Collaborations.
+# 🚀 Code-with-Buddy: The Ultimate Real-Time Coding Collaboration Platform!
 
-**DevCraft** is a live collaborative code editor website where users can write, edit, and share multiple Coding Languages with compilation in real-time. It offers syntax highlighting, user notifications, and seamless collaboration for teams or individuals.
+### 💡 **What is Code-with-Buddy?**
+**Code-with-Buddy** is a powerful, real-time collaborative coding platform that enables users to write, edit, and share multiple programming languages effortlessly. Experience seamless teamwork with real-time code synchronization, syntax highlighting, and instant notifications!
 
-### 🌐 Deployment Link
-[DevCraft](https://devcraft.aradhya.site)
 
----
-
-## 🛠️ Tech Stack
-- **Frontend**: React, CodeMirror
-- **Backend**: Node.js, Express
-- **WebSocket Communication**: Socket.IO
-- **Styling**: CSS
-- **Deployment**: Azure
 
 ---
 
-## ⚙️ Functionalities
-1. **Create a Room**: Users can create a room with a username and a randomly generated room ID.
-2. **Share Room ID**: The room ID can be shared with others to join the room.
-3. **Collaborative Editing**: All users in the room can see and edit code in real-time.
-4. **Syntax Highlighting**: CodeMirror integration provides syntax support for JavaScript.
-5. **User Notifications**: Notifications when users join or leave the room.
-6. **View Active Users**: See a list of all connected users in the room.
+## 🛠️ **Tech Stack at a Glance**
+- 🖥️ **Frontend**: React, CodeMirror
+- ⚙️ **Backend**: Node.js, Express
+- 🔄 **Real-Time Sync**: Socket.IO
+- 🎨 **Styling**: CSS
+- ☁️ **Deployment**: Azure
 
 ---
 
-## ✨ Features
-- Real-time code synchronization.
-- Instant user join/leave notifications.
-- Easy-to-share room IDs for collaboration.
-- Simple and intuitive user interface.
-- Fully responsive design for all devices.
+## 🔥 **Why Choose Code-with-Buddy?**
+✅ **Instant Code Collaboration**: Work together in real time effortlessly.  
+✅ **Syntax Highlighting**: Enjoy a clean, intuitive coding experience.  
+✅ **Join & Share Rooms**: Create a room and share your unique ID in seconds!  
+✅ **User Notifications**: Get notified when teammates join or leave.  
+✅ **Device-Friendly**: Fully responsive design for an uninterrupted experience anywhere.  
 
 ---
 
-## 🚀 How It Works
-1. **Create a Room**:
-   - Go to the [DevCraft](https://devcraft.aradhya.site) homepage.
-   - Enter your username and click "Create Room".
-   - A unique room ID will be generated automatically.
-2. **Share Room ID**:
-   - Copy the room ID and share it with others.
-3. **Join a Room**:
-   - Enter the shared room ID and your username on the homepage to join an existing room.
-4. **Collaborate**:
-   - Start editing the JavaScript code in the editor.
-   - All changes are synchronized in real-time across all connected users.
-5. **Notifications**:
-   - Receive notifications when new users join or leave the room.
-   - View a list of all active users in the sidebar.
+## ⚙️ **How It Works?**
+1️⃣ **Create a Room**:  
+   - Head over to website.  
+   - Enter your username and hit **"Create Room"**.  
+   - A **unique Room ID** will be generated automatically!  
+
+2️⃣ **Share Your Room ID**:  
+   - Copy the Room ID and send it to your buddies.  
+
+3️⃣ **Join a Room**:  
+   - Enter the shared Room ID and your username to start coding together.  
+
+4️⃣ **Code & Collaborate**:  
+   - Edit JavaScript code in real time with your teammates.  
+   - Changes are synced instantly across all users!  
+
+5️⃣ **Stay Notified**:  
+   - Receive notifications when someone joins or leaves.  
+   - See the list of active users in the sidebar.  
 
 ---
+
+🌟 **Level up your coding collaboration with Code-with-Buddy today!**
+
