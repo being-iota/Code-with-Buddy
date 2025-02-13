@@ -81,12 +81,12 @@ const Welcome = () => {
         }}
       >
         <div className="revealText">
-          <h1 className="animatedGradientText">Welcome to DevCraft</h1>
+          <h1 className="animatedGradientText">Welcome Coders</h1>
         </div>
         <div className="additionalInfo">
           <h2 className="subHeading">
-            Real-Time Code Editor for Learners,
-            <br /> Collaborations and Interviews.
+            Real-Time Collaborative Code Editor,
+            <br /> Code with Buddy
           </h2>
 
           <button className="btnn" onClick={handleButtonClick}>
@@ -102,7 +102,7 @@ const Welcome = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Aradhya Shukla
+              Vardhman Gupta
             </a>
             .
           </p>

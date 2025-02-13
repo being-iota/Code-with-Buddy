@@ -41,12 +41,12 @@ const Home = () => {
         <div className="boxshadow">
           <img
             className="homepagelogo"
-            src="/devcraftwithbg.png"
+            src="/new-cwb-bgm.png"
             alt="Devcraft Logo"
           />
         </div>
         <h4 className="mainLabel">
-          Enter your <em>Invite</em> Room ID
+          Enter your <u>Invite</u> Room ID
         </h4>
         <div className="inputGroup">
           <input
@@ -78,8 +78,8 @@ const Home = () => {
       </div>
       <footer>
         <h4>
-          Built by Aradhya Shukla.&nbsp;
-          <a href="https://github.com/alfastrek">GitHub</a>
+          Built by Vardhman Gupta.&nbsp;
+          <a href="https://github.com/Kaap10">GitHub</a>
         </h4>
       </footer>
     </div>

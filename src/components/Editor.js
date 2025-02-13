@@ -31,19 +31,19 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
   const getInitialCode = (language) => {
     switch (language) {
       case "python":
-        return `# Language: Python\n# Created by: Aradhya Shukla\n# (More Features Coming Soon)\n\nprint("Hello Python!")`;
+        return `# Language: Python\n# Created by: Vardhman Gupta\n\nprint("Hello Python!")`;
       case "text/x-csrc":
-        return `/* Language: C\nCreated by: Aradhya Shukla\n(More Features Coming Soon) */\n\n#include <stdio.h>\nint main() {\n  printf("Hello C!\\n");\n  return 0;\n}`;
+        return `/* Language: C\nCreated by: Vardhman Gupta */\n\n#include <stdio.h>\nint main() {\n  printf("Hello C!\\n");\n  return 0;\n}`;
       case "text/x-c++src":
-        return `/* Language: C++\nCreated by: Aradhya Shukla\n(More Features Coming Soon) */\n\n#include <iostream>\nint main() {\n  std::cout << "Hello C++!" << std::endl;\n  return 0;\n}`;
+        return `/* Language: C++\nCreated by: Vardhman Gupta */\n\n#include <iostream>\nint main() {\n  std::cout << "Hello C++!" << std::endl;\n  return 0;\n}`;
       case "text/x-csharp":
-        return `/* Language: C#\nCreated by: Aradhya Shukla\n(More Features Coming Soon) */\n\nusing System;\nclass Program {\n  static void Main() {\n    Console.WriteLine("Hello C#!");\n  }\n}`;
+        return `/* Language: C#\nCreated by: Vardhman Gupta */\n\nusing System;\nclass Program {\n  static void Main() {\n    Console.WriteLine("Hello C#!");\n  }\n}`;
       case "ruby":
-        return `# Language: Ruby\n# Created by: Aradhya Shukla\n# (More Features Coming Soon)\n\nputs "Hello Ruby!"`;
+        return `# Language: Ruby\n# Created by: Vardhman Gupta\n\nputs "Hello Ruby!"`;
       case "text/x-java":
-        return `/* Language: Java\nCreated by: Aradhya Shukla\n(More Features Coming Soon) */\n\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println("Hello Java!");\n  }\n}`;
+        return `/* Language: Java\nCreated by: Vardhman Gupta */\n\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println("Hello Java!");\n  }\n}`;
       default:
-        return `/* Language: Javascript\nCreated by: Aradhya Shukla\n(More Features Coming Soon) */\n\nconsole.log("Hello Javascript!")`;
+        return `/* Language: Javascript\nCreated by: Vardhman Gupta */\n\nconsole.log("Hello Javascript!")`;
     }
   };
 

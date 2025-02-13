@@ -132,7 +132,7 @@ const EditorPage = () => {
           <div className="logo">
             <img
               className="logoImage"
-              src="/devcrafttext.png"
+              src="/new-cwb-bgm.png"
               alt="devcraft logo"
             />
           </div>
