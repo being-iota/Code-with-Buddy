@@ -1,13 +1,29 @@
-# DevCraft : Real-Time Code/Text Editor for Learners and Collaborations.
+# Code with Buddy: Real-Time Collaborative Code/Text Editor 
 
-**DevCraft** is a live collaborative code editor website where users can write, edit, and share multiple Coding Languages with compilation in real-time. It offers syntax highlighting, user notifications, and seamless collaboration for teams or individuals.
-
-### 🌐 Deployment Link
-[DevCraft](https://devcraft.aradhya.site)
+This project is designed to empower learners and collaborators by providing a seamless environment for writing, editing, and sharing code in multiple programming languages. The editor also supports real-time compilation and collaboration.
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗 **Architecture**
+1. **Frontend**:
+   - Built using **React** and **CodeMirror** for a responsive and intuitive code editing experience.
+   - Provides syntax highlighting and a clean interface for ease of use.
+
+2. **Backend**:
+   - Developed using **Node.js** and **Express**, handling real-time updates and user management efficiently.
+
+3. **WebSocket Communication**:
+   - Powered by **Socket.IO** for instantaneous updates and collaboration.
+
+4. **Styling**:
+   - Fully responsive design implemented with **CSS**.
+
+5. **Deployment**:
+   - Hosted on **Azure** for scalable and reliable performance.
+
+---
+
+## 💻 **Tech Stack**
 - **Frontend**: React, CodeMirror
 - **Backend**: Node.js, Express
 - **WebSocket Communication**: Socket.IO
@@ -16,39 +32,96 @@
 
 ---
 
-## ⚙️ Functionalities
-1. **Create a Room**: Users can create a room with a username and a randomly generated room ID.
-2. **Share Room ID**: The room ID can be shared with others to join the room.
-3. **Collaborative Editing**: All users in the room can see and edit code in real-time.
-4. **Syntax Highlighting**: CodeMirror integration provides syntax support for JavaScript.
-5. **User Notifications**: Notifications when users join or leave the room.
-6. **View Active Users**: See a list of all connected users in the room.
+## 📂 **Project Structure**
+```plaintext
+.
+├── client/
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   ├── App.js              # Main application logic
+│   │   ├── styles.css          # Frontend styling
+├── server/
+│   ├── app.js                  # Node.js backend application
+│   ├── socket.js               # WebSocket handling
+├── package.json                # Dependencies and scripts
+├── README.md                   # Project documentation
+```
 
 ---
 
-## ✨ Features
-- Real-time code synchronization.
-- Instant user join/leave notifications.
-- Easy-to-share room IDs for collaboration.
-- Simple and intuitive user interface.
-- Fully responsive design for all devices.
+## ✨ **Features**
+- **Real-Time Collaboration**:
+   - Synchronize code changes instantly across all connected users.
+- **Multi-Language Support**:
+   - Write and compile code in various programming languages.
+- **User Notifications**:
+   - Notify users when someone joins or leaves a session.
+- **Room Management**:
+   - Create, join, and share unique room IDs for collaboration.
+- **Responsive Design**:
+   - Fully functional on both desktop and mobile devices.
 
 ---
 
-## 🚀 How It Works
+## 🚀 **How to Use**
 1. **Create a Room**:
-   - Go to the [DevCraft](https://devcraft.aradhya.site) homepage.
-   - Enter your username and click "Create Room".
+   - Navigate to the homepage.
+   - Enter your username and click "Create Room."
    - A unique room ID will be generated automatically.
+
 2. **Share Room ID**:
-   - Copy the room ID and share it with others.
+   - Copy and share the room ID with collaborators.
+
 3. **Join a Room**:
-   - Enter the shared room ID and your username on the homepage to join an existing room.
+   - Enter the shared room ID and your username on the homepage to join an existing session.
+
 4. **Collaborate**:
-   - Start editing the JavaScript code in the editor.
-   - All changes are synchronized in real-time across all connected users.
+   - Start editing code or text in the editor. All changes will be reflected in real-time.
+
 5. **Notifications**:
-   - Receive notifications when new users join or leave the room.
-   - View a list of all active users in the sidebar.
+   - Get notified when users join or leave and view active participants in the sidebar.
 
 ---
+
+## 🛠 **Setup Instructions**
+1. Clone the repository:
+   ```bash
+   git clone "https://github.com/Kaap10/Code-with-Buddy.git"
+   cd Code-with-Buddy
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and navigate to:
+   `http://localhost:3000`
+
+---
+
+## 🌟 **Future Enhancements**
+- Support for additional programming languages.
+- Add a built-in chat feature for enhanced communication.
+- Integrate code versioning and history tracking.
+- Deploy the application globally for broader accessibility.
+
+---
+
+## 🤝 **Contributing**
+Contributions are welcome! Fork the repository and submit pull requests with your improvements.
+
+---
+
+## 📜 **License**
+This project is licensed under the MIT License. See `LICENSE` for more details.
+
+---
+
+## 📬 **Contact**
+For questions or suggestions, feel free to reach out via GitHub issues or email.
