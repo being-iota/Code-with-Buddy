@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://code-with-buddy.azurewebsites.net/", "http://localhost:3000"], // Allow both production and local development
+    origin: ["https://code-with-buddy.azurewebsites.net/", "http://localhost:3000", "https://code-with-buddy-i1u9-kaap10s-projects.vercel.app/"], // Allow both production and local development
     methods: ["GET", "POST"],
   },
 });
@@ -80,6 +80,6 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT ||3000;
 server.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
 
