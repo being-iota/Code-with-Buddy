@@ -76,12 +76,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <footer>
-        <h4>
-          Built by Vardhman Gupta.&nbsp;
-          <a href="https://github.com/Kaap10">GitHub</a>
-        </h4>
-      </footer>
+
     </div>
   );
 };

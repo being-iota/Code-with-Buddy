@@ -6,6 +6,11 @@ const ACTIONS = {
   SYNC_CODE: "sync-code",
   LEAVE: "leave",
   LANGUAGE_CHANGE: "language-change",
+  CHAT_MESSAGE: "chat-message",
+  // WebRTC actions
+  ICE_CANDIDATE: "ice-candidate",
+  OFFER: "offer",
+  ANSWER: "answer",
 };
 
 module.exports = ACTIONS;

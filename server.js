@@ -3,8 +3,11 @@ const http = require("http");
 const path = require("path");
 const { Server } = require("socket.io");
 const ACTIONS = require("./src/Actions");
+require('dotenv').config();
 
 const app = express();
+app.use(express.json());
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
@@ -50,6 +53,28 @@ io.on("connection", (socket) => {
     });
   });
 
+  // Handle WebRTC signaling
+  socket.on(ACTIONS.ICE_CANDIDATE, ({ candidate, targetSocketId }) => {
+    io.to(targetSocketId).emit(ACTIONS.ICE_CANDIDATE, {
+      candidate,
+      socketId: socket.id,
+    });
+  });
+
+  socket.on(ACTIONS.OFFER, ({ offer, targetSocketId }) => {
+    io.to(targetSocketId).emit(ACTIONS.OFFER, {
+      offer,
+      socketId: socket.id,
+    });
+  });
+
+  socket.on(ACTIONS.ANSWER, ({ answer, targetSocketId }) => {
+    io.to(targetSocketId).emit(ACTIONS.ANSWER, {
+      answer,
+      socketId: socket.id,
+    });
+  });
+
   // Handle code change
   socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code }) => {
     socket.in(roomId).emit(ACTIONS.CODE_CHANGE, { code });
@@ -63,6 +88,16 @@ io.on("connection", (socket) => {
   // Handle language change
   socket.on(ACTIONS.LANGUAGE_CHANGE, ({ roomId, language }) => {
     socket.in(roomId).emit(ACTIONS.LANGUAGE_CHANGE, { language });
+  });
+
+  // Handle chat messages - updated to broadcast to all users in the room
+  socket.on(ACTIONS.CHAT_MESSAGE, ({ roomId, message, sender }) => {
+    // Broadcast to everyone in the room, including the sender
+    io.to(roomId).emit(ACTIONS.CHAT_MESSAGE, { 
+      message, 
+      sender,
+      timestamp: new Date().toISOString() // Add timestamp for better message ordering
+    });
   });
 
   // Handle user disconnecting
@@ -80,6 +115,6 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT ||3000;
+const PORT = process.env.PORT | 5000;
 server.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
 
