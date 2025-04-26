@@ -4,6 +4,8 @@ import toast from "react-hot-toast";
 import ACTIONS from "../Actions";
 import Client from "../components/Client";
 import Editor from "../components/Editor";
+import Chat from "../components/Chat";
+import MeetingRoom from "../components/MeetingRoom";
 import { initSocket } from "../socket";
 import {
   useLocation,
@@ -11,6 +13,9 @@ import {
   Navigate,
   useParams,
 } from "react-router-dom";
+import "../styles/Chat.css";
+import "../styles/EditorPage.css";
+import "../styles/MeetingRoom.css";
 
 const EditorPage = () => {
   const socketRef = useRef(null);
@@ -20,6 +25,8 @@ const EditorPage = () => {
   const reactNavigator = useNavigate();
   const [clients, setClients] = useState([]);
   const [codelang, setCodelang] = useState("javascript");
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isMeetingOpen, setIsMeetingOpen] = useState(false);
 
   useEffect(() => {
     const init = async () => {
@@ -95,7 +102,7 @@ const EditorPage = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          text: `Join the DevCraft room with ID: ${roomId}`,
+          text: `Join the CodeWithBuddy room with ID: ${roomId}`,
         });
         toast.success("Room ID shared successfully!");
       } catch (err) {
@@ -126,76 +133,109 @@ const EditorPage = () => {
   };
 
   return (
-    <div className="mainWrap">
-      <div className="aside">
-        <div className="asideInner">
-          <div className="logo">
+    <div className="editor-page">
+      <div className="mainWrap">
+        <div className="aside">
+          <div className="asideInner">
+            <div className="logo">
+              <img
+                className="logoImage"
+                src="/new-cwb-bgm.png"
+                alt="devcraft logo"
+              />
+            </div>
+            <div className="statusContainer">
+              <h3 className="liveStatustext">Status:</h3> &nbsp;
+              <h3 className="liveStatus">Live!</h3>
+            </div>
+            <hr className="customHrDashed" />
+            <div className="clientsList">
+              {clients.map((client) => (
+                <Client key={client.socketId} username={client.username} />
+              ))}
+            </div>
+          </div>
+          <hr className="customHrGradient" />
+          <button className="copyBtn" onClick={copyRoomId}>
             <img
-              className="logoImage"
-              src="/new-cwb-bgm.png"
-              alt="devcraft logo"
+              src="/copy.png"
+              alt="Copy"
+              style={{
+                width: "16px",
+                marginRight: "8px",
+                verticalAlign: "middle",
+              }}
             />
-          </div>
-          <div className="statusContainer">
-            <h3 className="liveStatustext">Status:</h3> &nbsp;
-            <h3 className="liveStatus">Live!</h3>
-          </div>
-          <hr className="customHrDashed" />
-          <div className="clientsList">
-            {clients.map((client) => (
-              <Client key={client.socketId} username={client.username} />
-            ))}
-          </div>
+            Copy Room ID
+          </button>
+          <button className="shareBtn" onClick={shareRoomId}>
+            <img
+              src="/send.png"
+              alt="Send"
+              style={{
+                width: "16px",
+                marginRight: "8px",
+                verticalAlign: "middle",
+              }}
+            />
+            Share Room ID
+          </button>
+          <button className="leaveBtn" onClick={leaveRoom}>
+            <img
+              src="/logout.png"
+              alt="Logout"
+              style={{
+                width: "16px",
+                marginRight: "8px",
+                verticalAlign: "middle",
+              }}
+            />
+            Leave Room
+          </button>
         </div>
-        <hr className="customHrGradient" />
-        <button className="copyBtn" onClick={copyRoomId}>
-          <img
-            src="/copy.png"
-            alt="Copy"
-            style={{
-              width: "16px",
-              marginRight: "8px",
-              verticalAlign: "middle",
+        <div className="editorwrap">
+          <Editor
+            socketRef={socketRef}
+            roomId={roomId}
+            onCodeChange={(code) => {
+              codeRef.current = code;
             }}
+            codelang={codelang}
+            onLanguageChange={handleLanguageChange}
           />
-          Copy Room ID
+        </div>
+      </div>
+      <div className="action-buttons">
+        <button 
+          className="meeting-icon-button"
+          onClick={() => setIsMeetingOpen(!isMeetingOpen)}
+          title="Open Meeting Room"
+        >
+          🎥
         </button>
-        <button className="shareBtn" onClick={shareRoomId}>
-          <img
-            src="/send.png"
-            alt="Send"
-            style={{
-              width: "16px",
-              marginRight: "8px",
-              verticalAlign: "middle",
-            }}
-          />
-          Share Room ID
-        </button>
-        <button className="leaveBtn" onClick={leaveRoom}>
-          <img
-            src="/logout.png"
-            alt="Logout"
-            style={{
-              width: "16px",
-              marginRight: "8px",
-              verticalAlign: "middle",
-            }}
-          />
-          Leave Room
+        <button 
+          className="chat-icon-button"
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          title="Open Chat"
+        >
+          💬
         </button>
       </div>
-      <div className="editorwrap">
-        <Editor
-          socketRef={socketRef}
-          roomId={roomId}
-          onCodeChange={(code) => {
-            codeRef.current = code;
-          }}
-          codelang={codelang}
-          onLanguageChange={handleLanguageChange}
-        />
-      </div>
+      <Chat
+        socketRef={socketRef}
+        roomId={roomId}
+        username={location.state?.username}
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+      <MeetingRoom
+        isOpen={isMeetingOpen}
+        onClose={() => setIsMeetingOpen(false)}
+        roomId={roomId}
+        username={location.state?.username}
+        socketRef={socketRef}
+        clients={clients}
+      />
     </div>
   );
 };

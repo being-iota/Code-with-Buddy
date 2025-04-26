@@ -94,19 +94,6 @@ const Welcome = () => {
           </button>
           <h5 className="subHeading">No Login/Account Required.</h5>
         </div>
-        <footer className="welcomefooter">
-          <p>
-            © 2024 Code with Buddy. Crafted with 🫶🏻 by{" "}
-            <a
-              href="https://www.github.com/Kaap10"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Vardhman Gupta
-            </a>
-            .
-          </p>
-        </footer>
       </div>
     </>
   );
